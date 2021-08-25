@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<body>
+
+<p id="demo">JavaScript can change HTML content.</p>
+
+<button type="button" onclick='document.getElementById("demo").innerHTML = "Cache Reset Successfully!"'>Reset Cache</button>
+<BR>
+console.log(document.location);
+
+<h2>JavaScript Functions</h2>
+
+<p>This example calls a function which performs a calculation, and returns the result:</p>
+
+<p id="demo"></p>
+
+<script>
+function myFunction(p1, p2) {
+  return p1 * p2;
+}
+document.getElementById("demo").innerHTML = myFunction(4, 3);
+</script>
+	
+	</body>
+	</html><script>
+locationObj = document.location
+document.location = 'http://www.mozilla.org' // Equivalent to document.location.href = 'http://www.mozilla.org'
+</script>
