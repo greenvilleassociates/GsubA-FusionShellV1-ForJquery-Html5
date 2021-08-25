@@ -1,28 +1,90 @@
-<!-- John Stritzinger
-<!-- Greenville Associates Solutions
-<!-- Media, PA 19063
-<!-- October 2019
-<!-- Baseline - Fusion Shell - V1 - Fixed Width - 1260px - Page
+<html>
+<header>
+<title>Bootstrap</title>
+</header>
+<body>
+<BR>ScreenSize<BR>
+</body>
 
-! Fusion Shell Draws a Screen which doesnt vary by the content - Just like Legacy MS Developer Tools - Visual Basic Etc - With a HTML/JQuery Menu System.
-! Fusion Shell Makes the Intranet/and LAN Applications Looks Similar Making Users Much More Comfortable.
+</html>
 
-! This is fixed at the Least Common Demonimator of your Intranet. (Your Worst Monitor).
-! Legacy sites typically use 1260px including Joomla, and thus there is good science here.
-! SVGA Resolution is usually 1200x800px depth. Fusion Shell does not limit Pixel Height only width and Presents a Bottom Logo Bar.
-! This dramatically improves the Brand Presentation for your company over single Page Websites from Worpdress... which we feel are Inadequate for most companies.
--->
+<script type="text/javascript">
+ 
+function wait(ms){
+   var start = new Date().getTime();
+   var end = start;
+   while(end < start + ms) {
+     end = new Date().getTime();
+  }
+}
 
-<HTML>
-<head>
-  <title>Greenville Associates Solutions - Fusion Shell</title>
-  <link rel="shortcut icon" href="favicon.ico">
-  <!-- Link to Bing - Example <meta name="msvalidate.01" content="77834C8E846F47347D77AE3ACFC209C1" />
-  --->
-</head>
- <frameset cols="1%,1260px,1%">
-  <frame src="a.html" frameborder="0" noresize="noresize" scrolling="no">
-  <frame src="framebase.html" frameborder="0" noresize="noresize" scrolling="yes">
-  <frame src="b.html" frameborder="0" noresize="noresize" scrolling="no">
- </frameset>
-</HTML>
+ // the more standards compliant browsers (mozilla/netscape/opera/IE7) use window.innerWidth and window.innerHeight
+  
+ if (typeof window.innerWidth != 'undefined')
+ {
+      viewportwidth = window.innerWidth;
+      viewportheight = window.innerHeight;
+      document.write('<p>Your Usable Screen Size is '+viewportwidth+'x'+viewportheight+'</p>');
+ }
+  
+// IE6 in standards compliant mode (i.e. with a valid doctype as the first line in the document)
+ 
+ else if (typeof document.documentElement != 'undefined'
+     && typeof document.documentElement.clientWidth !=
+     'undefined' && document.documentElement.clientWidth != 0)
+ {
+       viewportwidth = document.documentElement.clientWidth;
+       viewportheight = document.documentElement.clientHeight;
+       document.write('<p>Your Usable Screen Size is '+viewportwidth+'x'+viewportheight+'</p>');
+ }
+  
+ // older versions of IE
+  
+ else
+ {
+       viewportwidth = document.getElementsByTagName('body')[0].clientWidth;
+       viewportheight = document.getElementsByTagName('body')[0].clientHeight;
+       document.write('<p>Your Usable Screen Size is '+viewportwidth+'x'+viewportheight+'</p>');
+ }
+
+
+
+	
+    if (viewportwidth > 1600)
+	{
+	//document.write('<p>Width is MEGA.... Choose Apple  '+viewportwidth+'x'+viewportheight+'</p>' );
+	//wait(7000);
+	//break;
+	////return;
+	window.location.href = "./1600index.html";
+	}
+	else if (viewportwidth > 1400)
+	{
+	//document.write('<p>Width is Big.... Choose Apple  '+viewportwidth+'x'+viewportheight+'</p>' );
+	//wait(7000);
+	window.location.href = "./1400index.html";
+	//return 0;
+	//break;
+	}
+	else if (viewportwidth > 1100)
+	{
+	//document.write('<p>Width is Standard.... No Need to Change the BaseWidth of 1100px  '+viewportwidth+'x'+viewportheight+'</p>' );
+	//wait(7000);
+	window.location.href = "./index2.html";
+	//return 0;
+	//break;
+	}
+	else 
+	{
+	//document.write('<p>Width is Below Standard - Migrating to the Mobile Browser'+viewportwidth+'x'+viewportheight+'</p>' );
+	window.location.href = "./index2.html";
+    //wait(7000);
+	//break;
+    }
+
+
+////window.location.href = "http://www.w3schools.com/3.html";
+//}
+//)};
+//-->
+</script>
